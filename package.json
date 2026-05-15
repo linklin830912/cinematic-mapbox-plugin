@@ -1,0 +1,36 @@
+{
+  "name": "cinematic-mapbox-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/linklin830912/cinematic-mapbox-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/linklin830912/cinematic-mapbox-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linklin830912/cinematic-mapbox-plugin.git"
+  },
+  "license": "ISC",
+  "author": "linklin",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.8.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.13",
+    "vite-plugin-dts": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mapbox-gl": "^3.23.1"
+  }
+}
