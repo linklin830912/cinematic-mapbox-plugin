@@ -16,6 +16,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-
-  "include": ["src", "index.ts"]
+  
+  "include": [
+    "src", 
+    "dev",
+    "index.ts", 
+    "vite-env.d.ts"
+  ]
 }
