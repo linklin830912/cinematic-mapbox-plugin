@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
 
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
 
     "lib": ["DOM", "ESNext"],
@@ -16,7 +16,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  
+
   "include": [
     "src", 
     "dev",
