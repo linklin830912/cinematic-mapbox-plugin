@@ -12,3 +12,7 @@
 .inactive {
   background: gray !important;
 }
+
+.hidden {
+  display: none !important;
+}

@@ -1,8 +1,8 @@
 import { IControl, Map as MapboxMap } from 'mapbox-gl';
 import './style.css';
 import { ModeType } from './type';
-import { ALL_MODE_TYPES } from '../../core/const/control-const';
-import { controlStore } from '../../core/store/control-store';
+import { ALL_MODE_TYPES } from '../const/control-const';
+import { controlStore } from '../store/control-store';
 
 export class ModeTypeControl implements IControl {
   
@@ -23,7 +23,6 @@ export class ModeTypeControl implements IControl {
       this.buttonDict[mode] = button;
       button.onclick = () => {
         this.toggleDrawing(mode);
-        // getCurveFromPoints([{ x: 0, y: 0, z: 0 }, { x: 0.1, y: 0, z: 0 }, { x: 1, y: 1, z: 1 }]);
       }
 
       container.appendChild(this.buttonDict[mode]);
