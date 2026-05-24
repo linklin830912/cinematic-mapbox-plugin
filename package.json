@@ -29,11 +29,10 @@
     "vite-plugin-dts": "5.0.0"
   },
   "dependencies": {
-    "@turf/distance": "^7.3.5",
-    "@watergis/mapbox-gl-elevation": "^1.0.5",
-    "@watergis/terrain-rgb": "^2.1.1",
+    "axios": "1.16.1",
     "dotenv": "17.4.2",
     "express": "5.2.1",
+    "lucide-react": "^1.16.0",
     "mapbox-gl": "^3.23.1"
   }
 }

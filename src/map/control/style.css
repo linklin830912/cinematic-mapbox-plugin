@@ -1,0 +1,14 @@
+.draw-button {
+  padding: 6px 10px !important;
+  cursor: pointer !important;  
+  border: none !important;
+  width: 100% !important;
+}
+
+.active {
+  background: red !important;
+}
+
+.inactive {
+  background: gray !important;
+}

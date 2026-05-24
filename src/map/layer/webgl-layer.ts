@@ -1,14 +1,12 @@
 import { MercatorCoordinate } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { DrawType, RenderModeType } from './type';
 
-type RenderModeType = '2d' | '3d';
-type DrawType = 'point' | 'line' | 'face'; 
-
-type WebGLLayer = mapboxgl.CustomLayerInterface & {
+export type WebGLLayer = mapboxgl.CustomLayerInterface & {
   drawType: DrawType,
 };
 
-type WebGLLayerProps = {
+export type WebGLLayerProps = {
   id: string,
   renderingMode: RenderModeType,
   drawType: DrawType
@@ -18,8 +16,6 @@ export function createWebGLLayer(props: WebGLLayerProps, vertices: MercatorCoord
   let program = null as WebGLProgram | null;
   let buffer = null as WebGLBuffer | null;
   let aPos = -1 as number;
-
-  
 
   return {
     id: props.id,
@@ -95,8 +91,8 @@ function drawCall(drawType: DrawType, gl: WebGLRenderingContext) {
     case 'point':
       gl.drawArrays(gl.POINTS, 0, 3);
       break;
-    case 'line':
-      gl.drawArrays(gl.LINES, 0, 3);
+    case 'polyline':
+      gl.drawArrays(gl.LINE_STRIP, 0, 3);
       break;
     case 'face':
       gl.drawArrays(gl.TRIANGLES, 0, 3);

@@ -1,11 +1,12 @@
 import mapboxgl from 'mapbox-gl';
-import { DrawLineControl } from '../src/control';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { createWebGLLayer } from '../src/layer/webgl-layer';
+import { createWebGLLayer } from '../src/map/layer/webgl-layer';
+import { ModeTypeControl } from '../src/map/control/mode-type-control';
+import { GeometryTypeControl } from '../src/map/control/geometry-type-control';
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN || '';
-console.log('Mapbox Access Token:', mapboxgl.accessToken);
+
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v12',
@@ -13,7 +14,8 @@ const map = new mapboxgl.Map({
   zoom: 10
 });
 
-map.addControl(new DrawLineControl());
+map.addControl(new ModeTypeControl());
+map.addControl(new GeometryTypeControl());
 map.on('load', () => {
 
       const helsinki = mapboxgl.MercatorCoordinate.fromLngLat({ lng: 25.004, lat: 60.239 });
